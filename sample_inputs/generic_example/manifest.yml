@@ -1,0 +1,15 @@
+description: Test mapping of DATASET-NAME dataset to MOHCCN format for CanDIG
+# mapping is the csv file that contains the list of fields and mapping functions
+mapping: moh_template.csv
+# the name of the top-level identifier column in the input data
+identifier: submitter_donor_id
+# a link to the openapi schema
+schema: https://raw.githubusercontent.com/CanDIG/katsu/develop/chord_metadata_service/mohpackets/docs/schema.yml
+# class of schema for validation:
+schema_class: MoHSchemaV3
+# a reference date used to calculate date intervals, formatted as a mapping entry for the mapping template
+reference_date: earliest_date(Donor.date_resolution, PrimaryDiagnosis.date_of_diagnosis)
+# one or more files (dataset_functions.py) that implement the mappings
+# described in mapping file
+functions:
+  - new_cohort

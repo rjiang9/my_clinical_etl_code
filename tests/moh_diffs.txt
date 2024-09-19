@@ -1,0 +1,180 @@
+6,15c7,10
+< DONOR.INDEX.date_alive_after_lost_to_followup, {single_date(DONOR_SHEET.date_alive_after_lost_to_followup)}
+< DONOR.INDEX.date_alive_after_lost_to_followup.day_interval, {single_val(DONOR_SHEET.day_interval)}
+< DONOR.INDEX.date_alive_after_lost_to_followup.month_interval, {single_val(DONOR_SHEET.month_interval)}
+< DONOR.INDEX.date_of_birth, {single_date(DONOR_SHEET.date_of_birth)}
+< DONOR.INDEX.date_of_birth.day_interval, {single_val(DONOR_SHEET.day_interval)}
+< DONOR.INDEX.date_of_birth.month_interval, {single_val(DONOR_SHEET.month_interval)}
+< DONOR.INDEX.date_of_death, {single_date(DONOR_SHEET.date_of_death)}
+< DONOR.INDEX.date_of_death.day_interval, {single_val(DONOR_SHEET.day_interval)}
+< DONOR.INDEX.date_of_death.month_interval, {single_val(DONOR_SHEET.month_interval)}
+< DONOR.INDEX.date_resolution, {single_date(DONOR_SHEET.date_resolution)}
+---
+> DONOR.INDEX.date_resolution, {single_val(DONOR_SHEET.date_resolution)}
+> DONOR.INDEX.date_alive_after_lost_to_followup, {date_interval(DONOR_SHEET.date_alive_after_lost_to_followup)}
+> DONOR.INDEX.date_of_birth, {date_interval(DONOR_SHEET.date_of_birth)}
+> DONOR.INDEX.date_of_death, {date_interval(DONOR_SHEET.date_of_death)}
+20c15
+< DONOR.INDEX.primary_site, {single_val(DONOR_SHEET.primary_site)}
+---
+> DONOR.INDEX.primary_site, {pipe_delim(DONOR_SHEET.primary_site)}
+32,34c27
+< DONOR.INDEX.primary_diagnoses.INDEX.date_of_diagnosis, {single_date(PRIMARY_DIAGNOSES_SHEET.date_of_diagnosis)}
+< DONOR.INDEX.primary_diagnoses.INDEX.date_of_diagnosis.day_interval, {single_val(PRIMARY_DIAGNOSES_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.date_of_diagnosis.month_interval, {single_val(PRIMARY_DIAGNOSES_SHEET.month_interval)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.date_of_diagnosis, {date_interval(PRIMARY_DIAGNOSES_SHEET.date_of_diagnosis)}
+51c44
+< DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_collection_date, {single_date(SPECIMENS_SHEET.specimen_collection_date)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_collection_date, {date_interval(SPECIMENS_SHEET.specimen_collection_date)}
+67,68c60,61
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.is_primary_treatment, {boolean(TREATMENTS_SHEET.is_primary_treatment)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.line_of_treatment, {single_val(TREATMENTS_SHEET.line_of_treatment)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.is_primary_treatment, {single_val(TREATMENTS_SHEET.is_primary_treatment)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.line_of_treatment, {integer(TREATMENTS_SHEET.line_of_treatment)}
+74,76c67
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_end_date, {single_date(TREATMENTS_SHEET.treatment_end_date)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_end_date.day_interval, {single_val(TREATMENTS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_end_date.month_interval, {single_val(TREATMENTS_SHEET.month_interval)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_end_date, {date_interval(TREATMENTS_SHEET.treatment_end_date)}
+79,82c70,71
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_start_date, {single_date(TREATMENTS_SHEET.treatment_start_date)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_start_date.day_interval, {single_val(TREATMENTS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_start_date.month_interval, {single_val(TREATMENTS_SHEET.month_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_type, {single_val(TREATMENTS_SHEET.treatment_type)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_start_date, {date_interval(TREATMENTS_SHEET.treatment_start_date)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_type, {pipe_delim(TREATMENTS_SHEET.treatment_type)}
+84c73
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.actual_cumulative_drug_dose, {single_val(CHEMOTHERAPIES_SHEET.actual_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.actual_cumulative_drug_dose, {integer(CHEMOTHERAPIES_SHEET.actual_cumulative_drug_dose)}
+89c78
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.prescribed_cumulative_drug_dose, {single_val(CHEMOTHERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.prescribed_cumulative_drug_dose, {integer(CHEMOTHERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+91c80
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.actual_cumulative_drug_dose, {single_val(HORMONE_THERAPIES_SHEET.actual_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.actual_cumulative_drug_dose, {integer(HORMONE_THERAPIES_SHEET.actual_cumulative_drug_dose)}
+96c85
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.prescribed_cumulative_drug_dose, {single_val(HORMONE_THERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.prescribed_cumulative_drug_dose, {integer(HORMONE_THERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+98c87
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.actual_cumulative_drug_dose, {single_val(IMMUNOTHERAPIES_SHEET.actual_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.actual_cumulative_drug_dose, {integer(IMMUNOTHERAPIES_SHEET.actual_cumulative_drug_dose)}
+104c93
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.prescribed_cumulative_drug_dose, {single_val(IMMUNOTHERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.prescribed_cumulative_drug_dose, {integer(IMMUNOTHERAPIES_SHEET.prescribed_cumulative_drug_dose)}
+107,109c96,98
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_boost, {single_val(RADIATIONS_SHEET.radiation_boost)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_dosage, {single_val(RADIATIONS_SHEET.radiation_therapy_dosage)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_fractions, {single_val(RADIATIONS_SHEET.radiation_therapy_fractions)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_boost, {boolean(RADIATIONS_SHEET.radiation_boost)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_dosage, {integer(RADIATIONS_SHEET.radiation_therapy_dosage)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_fractions, {integer(RADIATIONS_SHEET.radiation_therapy_fractions)}
+114c103
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.greatest_dimension_tumour, {single_val(SURGERIES_SHEET.greatest_dimension_tumour)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.greatest_dimension_tumour, {integer(SURGERIES_SHEET.greatest_dimension_tumour)}
+116,118c105,107
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_involved, {single_val(SURGERIES_SHEET.margin_types_involved)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_assessed, {single_val(SURGERIES_SHEET.margin_types_not_assessed)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_involved, {single_val(SURGERIES_SHEET.margin_types_not_involved)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_involved, {pipe_delim(SURGERIES_SHEET.margin_types_involved)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_assessed, {pipe_delim(SURGERIES_SHEET.margin_types_not_assessed)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_involved, {pipe_delim(SURGERIES_SHEET.margin_types_not_involved)}
+126,127c115,116
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_length, {single_val(SURGERIES_SHEET.tumour_length)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_width, {single_val(SURGERIES_SHEET.tumour_width)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_length, {integer(SURGERIES_SHEET.tumour_length)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_width, {integer(SURGERIES_SHEET.tumour_width)}
+129,135c118,120
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {single_val(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_followup, {single_date(FOLLOWUPS_SHEET.date_of_followup)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_followup.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_followup.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_relapse, {single_date(FOLLOWUPS_SHEET.date_of_relapse)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_relapse.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_relapse.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {pipe_delim(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_followup, {date_interval(FOLLOWUPS_SHEET.date_of_followup)}
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_relapse, {date_interval(FOLLOWUPS_SHEET.date_of_relapse)}
+137c122
+< DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.method_of_progression_status, {single_val(FOLLOWUPS_SHEET.method_of_progression_status)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.method_of_progression_status, {pipe_delim(FOLLOWUPS_SHEET.method_of_progression_status)}
+146,152c131,133
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {single_val(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_followup, {single_date(FOLLOWUPS_SHEET.date_of_followup)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_followup.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_followup.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_relapse, {single_date(FOLLOWUPS_SHEET.date_of_relapse)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_relapse.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_relapse.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {pipe_delim(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+> DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_followup, {date_interval(FOLLOWUPS_SHEET.date_of_followup)}
+> DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_relapse, {date_interval(FOLLOWUPS_SHEET.date_of_relapse)}
+154c135
+< DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.method_of_progression_status, {single_val(FOLLOWUPS_SHEET.method_of_progression_status)}
+---
+> DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.method_of_progression_status, {pipe_delim(FOLLOWUPS_SHEET.method_of_progression_status)}
+170c151
+< DONOR.INDEX.exposures.INDEX.pack_years_smoked, {single_val(EXPOSURES_SHEET.pack_years_smoked)}
+---
+> DONOR.INDEX.exposures.INDEX.pack_years_smoked, {float(EXPOSURES_SHEET.pack_years_smoked)}
+172c153
+< DONOR.INDEX.exposures.INDEX.tobacco_type, {single_val(EXPOSURES_SHEET.tobacco_type)}
+---
+> DONOR.INDEX.exposures.INDEX.tobacco_type, {pipe_delim(EXPOSURES_SHEET.tobacco_type)}
+174,176c155,157
+< DONOR.INDEX.biomarkers.INDEX.ca125, {single_val(BIOMARKERS_SHEET.ca125)}
+< DONOR.INDEX.biomarkers.INDEX.cea, {single_val(BIOMARKERS_SHEET.cea)}
+< DONOR.INDEX.biomarkers.INDEX.er_percent_positive, {single_val(BIOMARKERS_SHEET.er_percent_positive)}
+---
+> DONOR.INDEX.biomarkers.INDEX.ca125, {integer(BIOMARKERS_SHEET.ca125)}
+> DONOR.INDEX.biomarkers.INDEX.cea, {integer(BIOMARKERS_SHEET.cea)}
+> DONOR.INDEX.biomarkers.INDEX.er_percent_positive, {float(BIOMARKERS_SHEET.er_percent_positive)}
+182,183c163,164
+< DONOR.INDEX.biomarkers.INDEX.hpv_strain, {single_val(BIOMARKERS_SHEET.hpv_strain)}
+< DONOR.INDEX.biomarkers.INDEX.pr_percent_positive, {single_val(BIOMARKERS_SHEET.pr_percent_positive)}
+---
+> DONOR.INDEX.biomarkers.INDEX.hpv_strain, {pipe_delim(BIOMARKERS_SHEET.hpv_strain)}
+> DONOR.INDEX.biomarkers.INDEX.pr_percent_positive, {float(BIOMARKERS_SHEET.pr_percent_positive)}
+185c166
+< DONOR.INDEX.biomarkers.INDEX.psa_level, {single_val(BIOMARKERS_SHEET.psa_level)}
+---
+> DONOR.INDEX.biomarkers.INDEX.psa_level, {integer(BIOMARKERS_SHEET.psa_level)}
+190,200c171,175
+< DONOR.INDEX.biomarkers.INDEX.test_date, {single_date(BIOMARKERS_SHEET.test_date)}
+< DONOR.INDEX.biomarkers.INDEX.test_date.day_interval, {single_val(BIOMARKERS_SHEET.day_interval)}
+< DONOR.INDEX.biomarkers.INDEX.test_date.month_interval, {single_val(BIOMARKERS_SHEET.month_interval)}
+< DONOR.INDEX.followups.INDEX, {indexed_on(FOLLOWUPS_SHEET.submitter_donor_id)}
+< DONOR.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {single_val(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+< DONOR.INDEX.followups.INDEX.date_of_followup, {single_date(FOLLOWUPS_SHEET.date_of_followup)}
+< DONOR.INDEX.followups.INDEX.date_of_followup.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.followups.INDEX.date_of_followup.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+< DONOR.INDEX.followups.INDEX.date_of_relapse, {single_date(FOLLOWUPS_SHEET.date_of_relapse)}
+< DONOR.INDEX.followups.INDEX.date_of_relapse.day_interval, {single_val(FOLLOWUPS_SHEET.day_interval)}
+< DONOR.INDEX.followups.INDEX.date_of_relapse.month_interval, {single_val(FOLLOWUPS_SHEET.month_interval)}
+---
+> DONOR.INDEX.biomarkers.INDEX.test_date, {date_interval(BIOMARKERS_SHEET.test_date)}
+> DONOR.INDEX.followups.INDEX, {moh_indexed_on_donor_if_others_absent(FOLLOWUPS_SHEET.submitter_donor_id, FOLLOWUPS_SHEET.submitter_primary_diagnosis_id, FOLLOWUPS_SHEET.submitter_treatment_id)}
+> DONOR.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {pipe_delim(FOLLOWUPS_SHEET.anatomic_site_progression_or_recurrence)}
+> DONOR.INDEX.followups.INDEX.date_of_followup, {date_interval(FOLLOWUPS_SHEET.date_of_followup)}
+> DONOR.INDEX.followups.INDEX.date_of_relapse, {date_interval(FOLLOWUPS_SHEET.date_of_relapse)}
+202c177
+< DONOR.INDEX.followups.INDEX.method_of_progression_status, {single_val(FOLLOWUPS_SHEET.method_of_progression_status)}
+---
+> DONOR.INDEX.followups.INDEX.method_of_progression_status, {pipe_delim(FOLLOWUPS_SHEET.method_of_progression_status)}

@@ -1,0 +1,3 @@
+submitter_donor_id, submitter_treatment_id, radiation_therapy_modality, radiation_therapy_type, radiation_therapy_fractions, radiation_therapy_dosage, anatomical_site_irradiated, radiation_boost, reference_radiation_treatment_id, 
+DONOR_5,TR_5, Teleradiotherapy protons (procedure), Internal, 30,66,FINGER (INCLUDING THUMBS),Yes, REFERENCE_RADIATION_TREATMENT_2, 
+DONOR_5,TR_5, Teleradiotherapy protons (procedure), Internal, 10,33,FINGER (INCLUDING THUMBS),No,, 

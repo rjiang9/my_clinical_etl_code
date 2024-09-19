@@ -1,0 +1,2 @@
+[console_scripts]
+CSVConvert = clinical_etl.CSVConvert:main

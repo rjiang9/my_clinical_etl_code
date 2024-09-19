@@ -1,0 +1,6 @@
+description: Test mapping of COMPARISON dataset to mCODEpacket format for katsu
+mapping: redcap2moh.csv
+identifier: submitter_donor_id
+schema: https://raw.githubusercontent.com/CanDIG/katsu/develop/chord_metadata_service/mohpackets/docs/schema.yml
+functions:
+    - redcap

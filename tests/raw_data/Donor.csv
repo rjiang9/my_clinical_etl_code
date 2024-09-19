@@ -1,0 +1,7 @@
+submitter_donor_id, program_id, lost_to_followup_after_clinical_event_identifier, lost_to_followup_reason, date_alive_after_lost_to_followup, is_deceased, cause_of_death, date_of_birth, date_of_death, gender, sex_at_birth,date_resolution
+DONOR_1,TEST_1,,,,Yes,Died of cancer,6/1/1954,35,Man,Male,month
+DONOR_2,TEST_1,,,,Yes,Died of other reasons,12/2/1982,1675,Woman,Female,day
+DONOR_3,TEST_1,PD_3,Lost contact,6/2022,No,,7/12/1945,,Non-binary,Other,month
+DONOR_4,TEST_1,,,,Yes,Not available,1/6/1984,239,Man,Male,month
+DONOR_5,TEST_2,PD_5,Not available,1/6/2022,Yes,,2/1984,,Woman,Female,month
+DONOR_6,TEST_2,PD_6,Withdrew from study,1/6/2022,No,,9/1974,,Non-binary,Other,month

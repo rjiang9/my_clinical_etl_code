@@ -1,0 +1,179 @@
+## Schema generated from https://raw.githubusercontent.com/CanDIG/katsu/develop/chord_metadata_service/mohpackets/docs/schema.yml
+## Based on repo commit sha "29fd55d173b7a01daa72fcc89187e3aabd1fb51e"
+## MoH template is manually updated to match the MoH clinical data model
+## Items are comma separated: element, mapping method
+DONOR.INDEX, {indexed_on(Singleton.submitter_donor_id)}
+DONOR.INDEX.submitter_donor_id, {single_val(Singleton.submitter_donor_id)}
+DONOR.INDEX.program_id, {single_val(Singleton.program_id)}
+DONOR.INDEX.lost_to_followup_after_clinical_event_identifier, {single_val(Singleton.lost_to_followup_after_clinical_event_identifier)}
+DONOR.INDEX.lost_to_followup_reason, {single_val(Singleton.lost_to_followup_reason)}
+DONOR.INDEX.date_alive_after_lost_to_followup, {single_date(Singleton.date_alive_after_lost_to_followup)}
+DONOR.INDEX.is_deceased, {boolean(Singleton.is_deceased)}
+DONOR.INDEX.cause_of_death, {single_val(Singleton.cause_of_death)}
+DONOR.INDEX.date_of_birth, {single_date(Singleton.x_date_of_birth)}
+DONOR.INDEX.date_of_death, {single_date(Singleton.x_date_of_death)}
+DONOR.INDEX.gender, {redcap.gender(Singleton.gender)}
+DONOR.INDEX.sex_at_birth, {redcap.sex_at_birth(Singleton.gender)}
+DONOR.INDEX.primary_site, {pipe_delim(Singleton.primary_site)}
+DONOR.INDEX.primary_diagnoses.INDEX, {indexed_on("Primary Diagnosis".submitter_donor_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.submitter_primary_diagnosis_id, {single_val("Primary Diagnosis".submitter_primary_diagnosis_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.date_of_diagnosis, {single_date("Primary Diagnosis".x_date_of_diagnosis)}
+DONOR.INDEX.primary_diagnoses.INDEX.cancer_type_code, {single_val("Primary Diagnosis".cancer_type_code)}
+DONOR.INDEX.primary_diagnoses.INDEX.basis_of_diagnosis, {single_val("Primary Diagnosis".basis_of_diagnosis)}
+DONOR.INDEX.primary_diagnoses.INDEX.lymph_nodes_examined_status, {single_val("Primary Diagnosis".lymph_nodes_examined_status)}
+DONOR.INDEX.primary_diagnoses.INDEX.lymph_nodes_examined_method, {single_val("Primary Diagnosis".lymph_nodes_examined_method)}
+DONOR.INDEX.primary_diagnoses.INDEX.number_lymph_nodes_positive, {integer("Primary Diagnosis".number_lymph_nodes_positive)}
+DONOR.INDEX.primary_diagnoses.INDEX.clinical_tumour_staging_system, {single_val("Primary Diagnosis".clinical_tumour_staging_system)}
+DONOR.INDEX.primary_diagnoses.INDEX.clinical_t_category, {single_val("Primary Diagnosis".clinical_t_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.clinical_n_category, {single_val("Primary Diagnosis".clinical_n_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.clinical_m_category, {single_val("Primary Diagnosis".clinical_m_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.clinical_stage_group, {single_val("Primary Diagnosis".clinical_stage_group)}
+DONOR.INDEX.primary_diagnoses.INDEX.laterality, {single_val("Primary Diagnosis".laterality)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX, {indexed_on(Specimen.submitter_primary_diagnosis_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.submitter_specimen_id, {redcap.submitter_specimen_id(Specimen.x_specimen_collection_date)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.pathological_tumour_staging_system, {single_val(Specimen.pathological_tumour_staging_system)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.pathological_t_category, {single_val(Specimen.pathological_t_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.pathological_n_category, {single_val(Specimen.pathological_n_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.pathological_m_category, {single_val(Specimen.pathological_m_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.pathological_stage_group, {single_val(Specimen.pathological_stage_group)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_collection_date, {single_date(Specimen.specimen_collection_date)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_storage, {single_val(Specimen.specimen_storage)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.tumour_histological_type, {single_val(Specimen.tumour_histological_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_anatomic_location, {single_val(Specimen.specimen_anatomic_location)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.reference_pathology_confirmed_diagnosis, {single_val(Specimen.reference_pathology_confirmed_diagnosis)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.reference_pathology_confirmed_tumour_presence, {single_val(Specimen.reference_pathology_confirmed_tumour_presence)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.tumour_grading_system, {single_val(Specimen.tumour_grading_system)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.tumour_grade, {single_val(Specimen.tumour_grade)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.percent_tumour_cells_range, {single_val(Specimen.percent_tumour_cells_range)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.percent_tumour_cells_measurement_method, {single_val(Specimen.percent_tumour_cells_measurement_method)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_processing, {single_val(Specimen.specimen_processing)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.specimen_laterality, {single_val(Specimen.specimen_laterality)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX, {indexed_on(Specimen.submitter_specimen_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX.submitter_sample_id, {single_val(Singleton.submitter_sample_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX.specimen_tissue_source, {single_val(Singleton.specimen_tissue_source)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX.tumour_normal_designation, {single_val(Singleton.tumour_normal_designation)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX.specimen_type, {single_val(Singleton.specimen_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.specimens.INDEX.sample_registrations.INDEX.sample_type, {single_val(Singleton.sample_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX, {indexed_on(Treatment.submitter_donor_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.submitter_treatment_id, {redcap.submitter_treatment_id(Treatment.submitter_donor_id, Treatment.Treatment_id, Treatment.treatment_type, "Primary Diagnosis".submitter_primary_diagnosis_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.is_primary_treatment, {single_val(Treatment.is_primary_treatment)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_start_date, {single_date(Treatment.r_treatment_start_date)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_end_date, {single_date(Treatment.r_treatment_end_date)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_setting, {redcap.treatment_setting(Treatment.treatment_setting)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_intent, {single_val(Treatment.treatment_intent)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.days_per_cycle, {integer(Treatment.days_per_cycle)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.number_of_cycles, {integer(Treatment.number_of_cycles)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.line_of_treatment, {single_val(Treatment.line_of_treatment)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.status_of_treatment, {single_val(Treatment.status_of_treatment)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.treatment_type, {pipe_delim(Treatment.treatment_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.response_to_treatment_criteria_method, {single_val(Treatment.response_to_treatment_criteria_method)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.response_to_treatment, {redcap.response_to_treatment(Treatment.Treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX, {redcap.treatment_index(Treatment.submitter_donor_id, Treatment.Treatment_id, Treatment.treatment_type, "Primary Diagnosis".submitter_primary_diagnosis_id, Chemotherapy.ch_submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.chemotherapy_drug_dose_units, {single_val(Chemotherapy.chemotherapy_dosage_units)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.drug_reference_database, {single_val(Chemotherapy.drug_reference_database)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.drug_name, {single_val(Chemotherapy.ch_drug_name)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.drug_reference_identifier, {single_val(Chemotherapy.ch_drug_rxnormcui)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.prescribed_cumulative_drug_dose, {integer(Chemotherapy.ch_prescribed_cumulative_drug_dose)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.chemotherapies.INDEX.actual_cumulative_drug_dose, {integer(Chemotherapy.ch_actual_cumulative_drug_dose)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX, {indexed_on("Hormone Therapy".submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.hormone_drug_dose_units, {single_val("Hormone Therapy".hormone_drug_dose_units)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.drug_reference_database, {single_val("Hormone Therapy".drug_reference_database)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.drug_name, {single_val("Hormone Therapy".drug_name)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.drug_reference_identifier, {single_val("Hormone Therapy".drug_reference_identifier)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.prescribed_cumulative_drug_dose, {single_val("Hormone Therapy".prescribed_cumulative_drug_dose)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.hormone_therapies.INDEX.actual_cumulative_drug_dose, {single_val("Hormone Therapy".actual_cumulative_drug_dose)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX, {redcap.treatment_index(Treatment.submitter_donor_id, Treatment.Treatment_id, Treatment.treatment_type, "Primary Diagnosis".submitter_primary_diagnosis_id, Immunotherapy.io_submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.immunotherapy_type, {single_val(Immunotherapy.r_immunotherapy_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.drug_reference_database, {single_val(Immunotherapy.drug_reference_database)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.immunotherapy_drug_dose_units, {single_val(Immunotherapy.immunotherapy_drug_dose_units)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.drug_name, {single_val(Immunotherapy.io_drug_name)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.drug_reference_identifier, {redcap.io_identifier(Immunotherapy.io_drug_name_rxcui)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.prescribed_cumulative_drug_dose, {redcap.io_prescribed_dose(Immunotherapy.io_drug_name_rxcui)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.immunotherapies.INDEX.actual_cumulative_drug_dose, {single_val(Immunotherapy.actual_cumulative_drug_dose)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX, {redcap.treatment_index(Treatment.submitter_donor_id, Treatment.Treatment_id, Treatment.treatment_type, "Primary Diagnosis".submitter_primary_diagnosis_id, Radiation.rad_submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_modality, {redcap.radiation_therapy_modality(Radiation.radiation_therapy_modality)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_type, {single_val(Radiation.radiation_therapy_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.anatomical_site_irradiated, {redcap.anatomical_site_irradiated(Radiation.anatomical_site_irradiated)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_fractions, {integer(Radiation.radiation_therapy_fractions)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_therapy_dosage, {integer(Radiation.radiation_therapy_dosage)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.radiation_boost, {boolean(Radiation.radiation_boost)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.radiations.INDEX.reference_radiation_treatment_id, {single_val(Radiation.reference_radiation_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX, {redcap.treatment_index(Treatment.submitter_donor_id, Treatment.Treatment_id, Treatment.treatment_type, "Primary Diagnosis".submitter_primary_diagnosis_id, Surgery.sx_submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.surgery_type, {redcap.surgery_type(Surgery.surgery_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.surgery_site, {redcap.surgery_site(Surgery.surgery_site)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.surgery_location, {redcap.surgery_location(Surgery.surgery_location)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_focality, {single_val(Surgery.tumour_focality)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.residual_tumour_classification, {redcap.residual_tumour_classification(Surgery.residual_tumour_classification)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_involved, {redcap.margin_types_involved(Surgery.margin_types_involved)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_involved.INDEX, {indexed_on(Surgery.margin_types_not_involved)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.margin_types_not_assessed.INDEX, {indexed_on(Surgery.margin_types_not_assessed)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.lymphovascular_invasion, {single_val(Surgery.lymphovascular_invasion)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.perineural_invasion, {single_val(Surgery.perineural_invasion)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.submitter_specimen_id, {single_val(Surgery.submitter_specimen_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_length, {integer(Surgery.tumour_length)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.tumour_width, {integer(Surgery.tumour_width)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.surgeries.INDEX.greatest_dimension_tumour, {integer(Surgery.greatest_dimension_tumour)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX, {indexed_on(Followup.submitter_treatment_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.submitter_follow_up_id, {single_val(Followup.submitter_follow_up_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_followup, {single_date(Followup.date_of_followup)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.disease_status_at_followup, {single_val(Followup.disease_status_at_followup)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.relapse_type, {single_val(Followup.relapse_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.date_of_relapse, {single_date(Followup.date_of_relapse)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.method_of_progression_status.INDEX, {indexed_on(Followup.method_of_progression_status)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence.INDEX, {pipe_delim(Followup.anatomic_site_progression_or_recurrence)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.recurrence_tumour_staging_system, {single_val(Followup.recurrence_tumour_staging_system)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.recurrence_t_category, {single_val(Followup.recurrence_t_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.recurrence_n_category, {single_val(Followup.recurrence_n_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.recurrence_m_category, {single_val(Followup.recurrence_m_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.recurrence_stage_group, {single_val(Followup.recurrence_stage_group)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX, {indexed_on(Followup.submitter_primary_diagnosis_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.submitter_follow_up_id, {single_val(Followup.submitter_follow_up_id)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_followup, {single_date(Followup.date_of_followup)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.disease_status_at_followup, {single_val(Followup.disease_status_at_followup)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.relapse_type, {single_val(Followup.relapse_type)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.date_of_relapse, {single_date(Followup.date_of_relapse)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.method_of_progression_status, {pipe_delim(Followup.method_of_progression_status)}
+DONOR.INDEX.primary_diagnoses.INDEX.treatments.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {pipe_delim(Followup.anatomic_site_progression_or_recurrence)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.recurrence_tumour_staging_system, {single_val(Followup.recurrence_tumour_staging_system)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.recurrence_t_category, {single_val(Followup.recurrence_t_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.recurrence_n_category, {single_val(Followup.recurrence_n_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.recurrence_m_category, {single_val(Followup.recurrence_m_category)}
+DONOR.INDEX.primary_diagnoses.INDEX.followups.INDEX.recurrence_stage_group, {single_val(Followup.recurrence_stage_group)}
+DONOR.INDEX.comorbidities.INDEX, {indexed_on(Singleton.submitter_donor_id)}
+DONOR.INDEX.comorbidities.INDEX.prior_malignancy, {single_val(Singleton.prior_malignancy)}
+DONOR.INDEX.comorbidities.INDEX.laterality_of_prior_malignancy, {single_val(Singleton.laterality_of_prior_malignancy)}
+DONOR.INDEX.comorbidities.INDEX.comorbidity_type_code, {redcap.comorbidity_type_code(Singleton.comorbidity_type_code)}
+DONOR.INDEX.comorbidities.INDEX.comorbidity_treatment_status, {single_val(Singleton.comorbidity_treatment_status)}
+DONOR.INDEX.comorbidities.INDEX.comorbidity_treatment, {single_val(Singleton.comorbidity_treatment)}
+DONOR.INDEX.comorbidities.INDEX.age_at_comorbidity_diagnosis, {integer(Singleton.age_at_comorbidity_diagnosis)}
+DONOR.INDEX.exposures.INDEX, {indexed_on(Singleton.tobacco_smoking_status)}
+DONOR.INDEX.exposures.INDEX.tobacco_smoking_status, {single_val(EXPOSURES_SHEET.tobacco_smoking_status)}
+DONOR.INDEX.exposures.INDEX.tobacco_type.INDEX, {indexed_on(EXPOSURES_SHEET.tobacco_type)}
+DONOR.INDEX.exposures.INDEX.pack_years_smoked, {single_val(EXPOSURES_SHEET.pack_years_smoked)}
+DONOR.INDEX.biomarkers.INDEX, {indexed_on(Biomarkers.submitter_donor_id)}
+DONOR.INDEX.biomarkers.INDEX.er_status, {single_val(Biomarkers.er_status)}
+DONOR.INDEX.biomarkers.INDEX.pr_status, {single_val(Biomarkers.pr_status)}
+DONOR.INDEX.biomarkers.INDEX.her2_ihc_status, {single_val(Biomarkers.her2_ihc_status)}
+DONOR.INDEX.biomarkers.INDEX.her2_ish_status, {single_val(Biomarkers.her2_ish_status)}
+DONOR.INDEX.biomarkers.INDEX.hpv_ihc_status, {single_val(Biomarkers.hpv_ihc_status)}
+DONOR.INDEX.biomarkers.INDEX.hpv_pcr_status, {single_val(Biomarkers.hpv_pcr_status)}
+DONOR.INDEX.biomarkers.INDEX.hpv_strain.INDEX, {indexed_on(Biomarkers.hpv_strain)}
+DONOR.INDEX.biomarkers.INDEX.test_date, {single_date(Biomarkers.test_date)}
+DONOR.INDEX.biomarkers.INDEX.psa_level, {integer(Biomarkers.psa_level)}
+DONOR.INDEX.biomarkers.INDEX.ca125, {integer(Biomarkers.ca125)}
+DONOR.INDEX.biomarkers.INDEX.cea, {integer(Biomarkers.cea)}
+DONOR.INDEX.biomarkers.INDEX.er_percent_positive, {single_val(Biomarkers.er_percent_positive)}
+DONOR.INDEX.biomarkers.INDEX.pr_percent_positive, {single_val(Biomarkers.pr_percent_positive)}
+DONOR.INDEX.followups.INDEX, {moh_indexed_on_donor_if_others_absent(Followup.submitter_donor_id, Followup.submitter_primary_diagnosis_id, Followup.submitter_treatment_id)}
+DONOR.INDEX.followups.INDEX.submitter_follow_up_id, {single_val(Followup.submitter_follow_up_id)}
+DONOR.INDEX.followups.INDEX.date_of_followup, {single_date(Followup.date_of_followup)}
+DONOR.INDEX.followups.INDEX.disease_status_at_followup, {single_val(Followup.disease_status_at_followup)}
+DONOR.INDEX.followups.INDEX.relapse_type, {single_val(Followup.relapse_type)}
+DONOR.INDEX.followups.INDEX.date_of_relapse, {single_date(Followup.date_of_relapse)}
+DONOR.INDEX.followups.INDEX.method_of_progression_status, {pipe_delim(Followup.method_of_progression_status)}
+DONOR.INDEX.followups.INDEX.anatomic_site_progression_or_recurrence, {pipe_delim(Followup.anatomic_site_progression_or_recurrence)}
+DONOR.INDEX.followups.INDEX.recurrence_tumour_staging_system, {single_val(Followup.recurrence_tumour_staging_system)}
+DONOR.INDEX.followups.INDEX.recurrence_t_category, {single_val(Followup.recurrence_t_category)}
+DONOR.INDEX.followups.INDEX.recurrence_n_category, {single_val(Followup.recurrence_n_category)}
+DONOR.INDEX.followups.INDEX.recurrence_m_category, {single_val(Followup.recurrence_m_category)}
+DONOR.INDEX.followups.INDEX.recurrence_stage_group, {single_val(Followup.recurrence_stage_group)}

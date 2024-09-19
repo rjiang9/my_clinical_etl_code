@@ -1,0 +1,12 @@
+__pycache__/*
+*.json
+*.xlsx
+*.xls
+.DS_Store
+*.pyc
+.venv/
+_local
+.idea
+.~lock*
+build/
+tests/raw_data_*

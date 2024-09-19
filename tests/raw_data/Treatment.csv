@@ -1,0 +1,11 @@
+submitter_treatment_id,submitter_donor_id, submitter_primary_diagnosis_id, treatment_type, is_primary_treatment, treatment_start_date, treatment_end_date, treatment_intent, response_to_treatment_criteria_method, response_to_treatment, status_of_treatment
+TR_1,DONOR_1,PD_1,Bone marrow transplant,Yes,01/09/2021,01/09/2022,Palliative,RECIST 1.1,Complete response,Treatment completed as prescribed
+TR_2,DONOR_2,PD_2,Systemic therapy,No,01/12/2021,01/12/2020,Guidance,iRECIST,Partial response,Treatment incomplete due to technical or organizational problems
+TR_3,DONOR_3,PD_3,Systemic therapy,Yes,01/01/2021,01/01/2022,Diagnostic,,Progressive disease,Treatment incomplete because patient died
+TR_4,DONOR_4,PD_4,Systemic therapy,No,01/02/2021,02/02/2022,Forensic,Response Assessment in Neuro-Oncology (RANO),Stable disease,Patient choice (stopped or interrupted treatment)
+TR_5,DONOR_5,PD_5,Radiation therapy,Yes,01/09/2021,01/09/2022,Preventive,AML Response Criteria,,Physician decision (stopped or interrupted treatment)
+TR_6,DONOR_6,PD_6,Stem cell transplant,No,01/07/2021,01/08/2022,Diagnostic,Physician Assessed Response Criteria,,Treatment stopped due to lack of efficacy (disease progression)
+TR_7,DONOR_2,PD_2_1,Surgery,Yes,01/02/2021,01/02/2022,Diagnostic,,Progressive disease,Treatment stopped due to acute toxicity
+TR_8,DONOR_2,PD_2_1,Systemic therapy,No,01/03/2021,01/03/2022,Forensic,AML Response Criteria,Immune confirmed progressive disease (iCPD),Other
+TR_9,DONOR_6,PD_6,Surgery,No,01/02/2021,01/02/2022,Diagnostic,Blazer score,Progressive disease,
+TR_10,DONOR_5,PD_5,Systemic therapy,No,01/02/2021,01/02/2022,Forensic,Response Assessment in Neuro-Oncology (RANO),,

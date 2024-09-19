@@ -1,0 +1,5 @@
+submitter_sample_id,submitter_donor_id,submitter_specimen_id,specimen_tissue_source,tumour_normal_designation,specimen_type,sample_type,extra
+SAMPLE_REGISTRATION_1,DONOR_2,SPECIMEN_4,Cervical mucus,Tumour,Recurrent tumour,Total DNA,Foo
+SAMPLE_REGISTRATION_2,DONOR_2,SPECIMEN_7,Cervical mucus,Normal,Recurrent tumour,Total DNA,Bar
+SAMPLE_REGISTRATION_3,DONOR_2,SPECIMEN_5,Cervical mucus,Normal,Recurrent tumour,Total DNA,Baz
+SAMPLE_REGISTRATION_4,DONOR_5,SPECIMEN_6,Cervical mucus,Normal,Recurrent tumour,Total DNA,Bat

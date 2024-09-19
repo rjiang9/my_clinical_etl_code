@@ -1,0 +1,8 @@
+submitter_donor_id,submitter_primary_diagnosis_id, submitter_specimen_id,submitter_treatment_id, pathological_tumour_staging_system, specimen_collection_date, specimen_storage, tumour_histological_type, specimen_anatomic_location, reference_pathology_confirmed_diagnosis, reference_pathology_confirmed_tumour_presence, tumour_grading_system, tumour_grade, percent_tumour_cells_range, percent_tumour_cells_measurement_method, specimen_processing, specimen_laterality,,,,,,,,,,,,,,
+DONOR_4,PD_4,SPECIMEN_1,,AJCC 8th edition,03/02/2021,Frozen in liquid nitrogen,8970/3,C43.9,Yes,Yes,FNCLCC grading system,G1,0-19%,Genomics,Cryopreservation in liquid nitrogen (dead tissue),,,,,,,,,,,,,,,
+DONOR_5,PD_5,SPECIMEN_2,,Binet staging system,01/07/2020,Not Applicable,8620/9,C67.6,No,No,Four-tier grading system,G3,20-50%,Image analysis,Cryopreservation in dry ice (dead tissue),Left,,,,,,,,,,,,,,
+DONOR_6,PD_6,SPECIMEN_3,TR_9,Rai staging system,03/03/2020,Frozen in vapour phase,,C43.9,,,,,,,Cryopreservation of live cells in liquid nitrogen,,,,,,,,,,,,,,,
+DONOR_2,PD_2_1,SPECIMEN_4,,Durie-Salmon staging system,23/12/2021,RNA later frozen,8620/9,C67.6,No,No,Four-tier grading system,G3,20-50%,Image analysis,Cryopreservation in dry ice (dead tissue),Left,,,,,,,,,,,,,,
+DONOR_2,PD_2,SPECIMEN_5,TR_7,Durie-Salmon staging system,07/12/2020,Frozen in -70 freezer,,C15.9,,,,,,,Formalin fixed & paraffin embedded,,,,,,,,,,,,,,,
+DONOR_5,PD_5,SPECIMEN_6,,Durie-Salmon staging system,20/04/2021,Cut slide,8124/9,C15.9,,Not done,IASLC grading system,G3,51-100%,Pathology estimate by percent nuclei,Formalin fixed - buffered,,,,,,,,,,,,,,,
+DONOR_2,PD_2_1,SPECIMEN_7,,Durie-Salmon staging system,23/02/2021,RNA later frozen,,C43.9,,,,,,,Cryopreservation - other,,,,,,,,,,,,,,,

@@ -1,0 +1,9 @@
+description: Test mapping
+mapping: test2mohv3.csv
+identifier: submitter_donor_id
+schema: https://raw.githubusercontent.com/CanDIG/katsu/develop/chord_metadata_service/mohpackets/docs/schema.yml
+schema_class: MoHSchemaV3
+reference_date: earliest_date(Donor.date_resolution, PrimaryDiagnosis.date_of_diagnosis)
+date_format: DMY
+functions:
+    - testmap

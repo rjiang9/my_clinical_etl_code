@@ -1,0 +1,6 @@
+submitter_donor_id,submitter_treatment_id,systemic_therapy_type,drug_name,drug_reference_identifier,drug_dose_units,prescribed_cumulative_drug_dose,actual_cumulative_drug_dose,drug_reference_database, days_per_cycle, number_of_cycles,start_date,end_date
+DONOR_2,TR_2,Chemotherapy,NIVOLUMAB,87354,mg/m2,150,111,PubChem,4,2,1/12/2021,1/03/2023
+DONOR_2,TR_2,Chemotherapy,NIVOLUMAB,87333,mg/m2,150,111,PubChem,5,2,1/04/2020,1/12/2024
+DONOR_3,TR_3,Hormone therapy,degarelix,46475,ug/m2,179,97,PubChem,6,3,10/12/2020,19/12/2021
+DONOR_4,TR_4,Immunotherapy,Pembrolizumab,4459876,IU/kg,95,160,RxNorm,4,2,1/3/2021,12/12/2021
+DONOR_2,TR_8,Immunotherapy,Pexidartinib,8836851,ug/m2,197,183,PubChem,6,1,9/5/2021,6/6/2023

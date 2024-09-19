@@ -1,0 +1,3 @@
+submitter_donor_id,submitter_specimen_id,submitter_treatment_id,surgery_reference_database,surgery_reference_identifier,surgery_type,surgery_site,surgery_location,tumour_length,tumour_width,greatest_dimension_tumour,tumour_focality,residual_tumour_classification,margin_types_involved,margin_types_not_involved,lymphovascular_invasion,margin_types_not_assessed,perineural_invasion
+DONOR_2,SPECIMEN_4,TR_7,SNOMED,178294003,Axillary lymph nodes sampling,C14,Primary,9,7,5,Unifocal,R2,Distal margin|Circumferential resection margin,,Absent,Not available,Absent
+DONOR_6,SPECIMEN_43,TR_9,NCIt,C15361,Fine needle aspiration biopsy,C14,Primary,9,7,5,Unifocal,R2,Distal margin|Circumferential resection margin,,Absent,Not available,Absent
